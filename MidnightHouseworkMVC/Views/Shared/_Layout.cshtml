@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MidnightHouseworkMVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MidnightHouseworkMVC.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="content">
+            <hgroup>
+                <img id="homeLogo" src="~/img/MHW transparent white.png" />
+            </hgroup>
+        </div>
+        <div class="overlay"></div>
+    </header>
+    <section class="site">
+        <blockquote id="homeQuote">
+            <img align="left">Nostalgic, anthemic and immersive. These are just a few of the words that have described the Belfast based indie/ambient rock band Midnight Housework. They take inspiration from many Northern Irish bands in their own scene, but are primarily influenced by The War On Drugs, American Football and And So I Watch You From Afar.
+
+            Comprising of members from Belfast's thriving music scene, the band's seasoned line-up have been developing not only their sound, but their branding since their social media debut. They pride themselves in maintaining a lofi image, inspired by that of old vintage media from 35mm photos, and bringing that to their social media campaign.
+
+            Midnight Housework combines ambient, glassy math rock sounds with nostalgic chord progressions and vocal melodies that aim to capture both ears and imaginations. Their songs take listeners through an immersive sonic journey that dances between cathartic loudness and a tranquil silence.
+
+            All members have a strong alumni of artists and bands they’ve previously played for in Belfast's thriving music scene including Garrett Laurie, MOSA, Ember Trails, Big Daisy and more. Luke and Thomas are also working musicians doing a mixture of music teaching and cover shows around the country.
+
+            The band is currently set to release their debut single “Who’s Gonna Keep Me Holding On” in September 2024.
+        </blockquote>
+        @{
+            var tiktok = "https://www.tiktok.com/@midnighthousework";
+            var youtube = "https://www.youtube.com/@MidnightHousework";
+        }
+        
+        <div id="socialMediaLinks">
+            <a href="https://x.com/MNHousework" class="fa fa-twitter" target=”_blank”></a>
+            <a href="https://www.facebook.com/midnighthousework/" class="fa fa-facebook" target=”_blank”></a>
+            <a href="https://www.instagram.com/midnighthousework/" class="fa fa-instagram" target=”_blank”></a>
+            <a href="@(tiktok)" class="fa fa-tiktok" target=”_blank”><svg style="width: 26px; color: white !important;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by  - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" /></svg></a>
+            <a href="https://soundcloud.com/midnight-housework" class="fa fa-soundcloud" target=”_blank”></a>
+            <a href="@(youtube)" class="fa fa-youtube" target=”_blank”></a>
+        </div>
+
+    </section>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
